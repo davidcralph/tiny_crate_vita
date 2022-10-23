@@ -4,11 +4,7 @@ var menu_list : Label
 var menu_items := []
 
 onready var main_list : Label = $Menu/List
-var main_items := ["play", "options", "credits", "quit"]
-
-onready var quit_menu : Control = $Menu/Quit
-onready var quit_list : Label = $Menu/Quit/List
-var quit_items := ["yes", "no"]
+var main_items := ["play", "options", "credits"]
 
 var cursor := 0
 
@@ -20,9 +16,6 @@ onready var node_audio_scroll : AudioStreamPlayer = $AudioScroll
 onready var node_audio_play : AudioStreamPlayer = $AudioPlay
 onready var node_audio_options : AudioStreamPlayer = $AudioOptions
 onready var node_audio_credits : AudioStreamPlayer = $AudioCredits
-onready var node_audio_quit : AudioStreamPlayer = $AudioQuit
-onready var node_audio_yes : AudioStreamPlayer = $AudioYes
-onready var node_audio_no : AudioStreamPlayer = $AudioNo
 
 var is_input = true
 
@@ -34,10 +27,6 @@ func _ready():
 func _input(event):
 	if !is_input:
 		return
-	if event.is_action_pressed("action"):
-		if menu_list == quit_list:
-			cursor = 1
-			menu_select()
 	elif event.is_action_pressed("jump"):
 		menu_select()
 	else:
@@ -74,40 +63,14 @@ func menu_select():
 			Shared.wipe_scene(Shared.credits_path)
 			is_input = false
 			node_audio_credits.play()
-		"quit":
-			cursor = -1
-			write_menu()
-			switch_menu("quit")
-			node_audio_quit.play()
-		"yes":
-			is_input = false
-			node_audio_yes.play()
-			if OS.get_name() == "HTML5":
-				Shared.wipe_scene(Shared.splash_path)
-			else:
-				Shared.wipe_quit()
-		"no":
-			switch_menu("main")
-			cursor = 3
-			write_menu()
-			node_audio_no.play()
 
 func switch_menu(arg):
 	cursor = 0
 	match arg:
 		"main":
-			quit_menu.visible = false
 			menu_list = main_list
 			menu_items = main_items
 			
 			node_cursor.get_parent().remove_child(node_cursor)
 			main_list.add_child(node_cursor)
-		"quit":
-			quit_menu.visible = true
-			menu_list = quit_list
-			menu_items = quit_items
-			cursor = 1
-			
-			node_cursor.get_parent().remove_child(node_cursor)
-			quit_list.add_child(node_cursor)
 	write_menu()
