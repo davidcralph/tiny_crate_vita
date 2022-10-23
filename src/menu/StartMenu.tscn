@@ -1,7 +1,6 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://media/font/m3x6.tres" type="DynamicFont" id=1]
-[ext_resource path="res://media/image/9slice.png" type="Texture" id=2]
 [ext_resource path="res://src/menu/StartMenu.gd" type="Script" id=3]
 [ext_resource path="res://media/font/m3x6.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://media/font/m6x11.ttf" type="DynamicFontData" id=5]
@@ -14,7 +13,6 @@
 [ext_resource path="res://src/stage/GameCamera.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/actor/SwitchBlockBlue.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/actor/SwitchBlue.tscn" type="PackedScene" id=15]
-[ext_resource path="res://media/font/m5x7.tres" type="DynamicFont" id=17]
 [ext_resource path="res://media/audio/sfx/sfx3.wav" type="AudioStream" id=18]
 [ext_resource path="res://media/audio/sfx/sfx18.wav" type="AudioStream" id=19]
 [ext_resource path="res://media/audio/sfx/sfx13.wav" type="AudioStream" id=20]
@@ -47,82 +45,18 @@ margin_top = 47.0
 margin_right = 44.0
 margin_bottom = 57.0
 color = Color( 0.113725, 0.168627, 0.32549, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="List" type="Label" parent="Menu"]
 margin_left = 12.0
 margin_top = 48.0
 margin_right = 48.0
-margin_bottom = 89.0
+margin_bottom = 78.0
 custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "play
 options
-credits
-quit"
+credits"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Quit" type="Control" parent="Menu"]
-visible = false
-margin_left = 80.0
-margin_top = 44.0
-margin_right = 120.0
-margin_bottom = 84.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Menu/Quit"]
-margin_left = -1.0
-margin_top = -1.0
-margin_right = 69.0
-margin_bottom = 41.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource( 2 )
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="List" type="Label" parent="Menu/Quit"]
-margin_left = 18.0
-margin_top = 17.0
-margin_right = 50.0
-margin_bottom = 36.0
-custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
-custom_fonts/font = ExtResource( 1 )
-text = "yes
-no"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Header" type="Label" parent="Menu/Quit"]
-margin_left = -53.0
-margin_top = 4.0
-margin_right = 121.0
-margin_bottom = 17.0
-custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_as_outline = 1
-custom_fonts/font = ExtResource( 17 )
-text = "Quit Game?"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Header" type="Label" parent="."]
 margin_left = -33.0

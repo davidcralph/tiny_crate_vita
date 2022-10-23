@@ -95,9 +95,6 @@ custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Back to Menu"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MenuItems/Back"]
 stream = ExtResource( 7 )
@@ -120,47 +117,6 @@ bus = "Music"
 position = Vector2( 50, 61 )
 script = ExtResource( 20 )
 
-[node name="Label" type="Label" parent="MenuItems/Fullscreen"]
-margin_top = 1.0
-margin_right = 50.0
-margin_bottom = 9.0
-custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
-custom_fonts/font = ExtResource( 9 )
-text = "Fullscreen"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Box" type="ColorRect" parent="MenuItems/Fullscreen"]
-margin_left = 99.0
-margin_top = -1.0
-margin_right = 109.0
-margin_bottom = 9.0
-color = Color( 1, 0.945098, 0.909804, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Back" type="ColorRect" parent="MenuItems/Fullscreen/Box"]
-margin_left = 1.0
-margin_top = 1.0
-margin_right = 9.0
-margin_bottom = 9.0
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Fill" type="ColorRect" parent="MenuItems/Fullscreen/Box"]
-margin_left = 2.0
-margin_top = 2.0
-margin_right = 8.0
-margin_bottom = 8.0
-color = Color( 1, 0.945098, 0.909804, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MenuItems/Fullscreen"]
 stream = ExtResource( 10 )
 bus = "SFX"
@@ -168,43 +124,6 @@ bus = "SFX"
 [node name="WindowSize" type="Node2D" parent="MenuItems"]
 position = Vector2( 50, 73 )
 script = ExtResource( 21 )
-
-[node name="Label" type="Label" parent="MenuItems/WindowSize"]
-margin_top = 1.0
-margin_right = 50.0
-margin_bottom = 9.0
-custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
-custom_fonts/font = ExtResource( 9 )
-text = "Window Size"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Scale" type="Label" parent="MenuItems/WindowSize"]
-margin_left = 48.0
-margin_top = 1.0
-margin_right = 80.0
-margin_bottom = 9.0
-custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
-custom_fonts/font = ExtResource( 9 )
-text = "1x"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Resolution" type="Label" parent="MenuItems/WindowSize"]
-margin_left = 72.0
-margin_top = 1.0
-margin_right = 136.0
-margin_bottom = 9.0
-custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
-custom_fonts/font = ExtResource( 9 )
-text = "228 x 128"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MenuItems/WindowSize"]
 stream = ExtResource( 3 )
@@ -215,21 +134,18 @@ position = Vector2( 50, 85 )
 script = ExtResource( 22 )
 
 [node name="Label" type="Label" parent="MenuItems/TouchControls"]
-margin_top = 1.0
+margin_top = -23.0
 margin_right = 56.0
-margin_bottom = 9.0
+margin_bottom = -15.0
 custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Touch Controls"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Box" type="ColorRect" parent="MenuItems/TouchControls"]
 margin_left = 99.0
-margin_top = -1.0
+margin_top = -25.0
 margin_right = 109.0
-margin_bottom = 9.0
+margin_bottom = -15.0
 color = Color( 1, 0.945098, 0.909804, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -264,9 +180,9 @@ position = Vector2( 50, 97 )
 script = ExtResource( 23 )
 
 [node name="Label" type="Label" parent="MenuItems/DeleteSaveData"]
-margin_top = 1.0
+margin_top = -23.0
 margin_right = 128.0
-margin_bottom = 9.0
+margin_bottom = -15.0
 custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Delete Save Data"
@@ -284,9 +200,9 @@ position = Vector2( 50, 109 )
 script = ExtResource( 24 )
 
 [node name="Label" type="Label" parent="MenuItems/UnlockAll"]
-margin_top = 1.0
+margin_top = -23.0
 margin_right = 128.0
-margin_bottom = 9.0
+margin_bottom = -15.0
 custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Unlock All"

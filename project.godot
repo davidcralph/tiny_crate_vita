@@ -116,6 +116,8 @@ enabled=PoolStringArray( "aseprite_importer" )
 [global]
 
 extension=false
+gl=false
+import=false
 
 [importer_defaults]
 
@@ -235,7 +237,9 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
+quality/driver/fallback_to_gles2=true
 2d/snapping/use_gpu_pixel_snap=true
+vram_compression/import_etc=true
 environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
 quality/dynamic_fonts/use_oversampling=false
